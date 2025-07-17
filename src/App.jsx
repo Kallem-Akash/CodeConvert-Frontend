@@ -30,7 +30,7 @@ function App() {
   } = useCodeConversion();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-cyan-50 relative overflow-hidden flex flex-col">
+    <div className="min-h-screen relative overflow-hidden flex flex-col">
       <Header />
       <HeroSection />
 

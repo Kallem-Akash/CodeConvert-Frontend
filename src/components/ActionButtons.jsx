@@ -2,7 +2,7 @@ import React from 'react';
 import { Copy, Check } from 'lucide-react';
 
 const ActionButtons = ({ handleClear, handleCopy, convertedCode, copied }) => (
-  <div className="bg-white/30 backdrop-blur-xl border-b border-gray-200/30 relative z-10">
+  <div className="backdrop-blur-xl relative z-10">
     <div className="max-w-6xl mx-auto px-6 py-6 relative z-10">
       <div className="flex justify-center space-x-4">
         <button

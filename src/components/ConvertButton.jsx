@@ -10,9 +10,9 @@ export const ConvertButton = ({
     <button
       onClick={onClick}
       disabled={disabled || isConverting}
-      className="px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-400 disabled:cursor-not-allowed text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 backdrop-blur-sm relative overflow-hidden"
+      className="px-10 py-4 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 backdrop-blur-sm relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+      <div className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
       <div className="relative z-10">
       {isConverting ? (
         <div className="flex items-center">
