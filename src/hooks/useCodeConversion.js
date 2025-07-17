@@ -12,7 +12,7 @@ const useCodeConversion = () => {
     if (!sourceCode.trim()) return;
     setIsConverting(true);
     try {
-      const response = await fetch('http://localhost:8080/api/convert', {
+      const response = await fetch('https://codeconvert-backend-production.up.railway.app/api/convert', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sourceCode, fromLang, toLang }),
