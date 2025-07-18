@@ -1,7 +1,8 @@
-import React from 'react';
-import { Code2, Menu } from 'lucide-react';
+import React, { useState } from 'react';
+import { Code2, Menu, X } from 'lucide-react';
 
 export const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const handleGetStarted = () => {
     const panel = document.getElementById('language-selection-panel');
     if (panel) {
@@ -21,6 +22,7 @@ export const Header = () => {
               CodeConvert
             </span>
           </div>
+          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8">
             <button className="text-gray-800 hover:text-gray-900 font-medium transition-all duration-300 hover:bg-white/60 px-4 py-2 rounded-xl backdrop-blur-sm">
               Features
@@ -41,10 +43,41 @@ export const Header = () => {
               Get Started
             </button>
           </nav>
-          <button className="md:hidden p-2 hover:bg-white/60 rounded-xl transition-all duration-300 backdrop-blur-sm">
-            <Menu className="w-6 h-6 text-gray-600" />
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 hover:bg-white/60 rounded-xl transition-all duration-300 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen((open) => !open)}
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6 text-gray-600" /> : <Menu className="w-6 h-6 text-gray-600" />}
           </button>
         </div>
+        {/* Mobile Dropdown Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute left-0 right-0 top-full mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 flex flex-col items-stretch py-4 z-50 animate-fade-in">
+            <button className="text-gray-800 hover:text-gray-900 font-medium transition-all duration-300 hover:bg-gray-100 px-6 py-3 text-left" onClick={() => setMobileMenuOpen(false)}>
+              Features
+            </button>
+            <button className="text-gray-800 hover:text-gray-900 font-medium transition-all duration-300 hover:bg-gray-100 px-6 py-3 text-left" onClick={() => setMobileMenuOpen(false)}>
+              Pricing
+            </button>
+            <button className="text-gray-800 hover:text-gray-900 font-medium transition-all duration-300 hover:bg-gray-100 px-6 py-3 text-left" onClick={() => setMobileMenuOpen(false)}>
+              Sign In
+            </button>
+            <a href="https://kallemakash.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 text-center mx-4 my-2">
+              Portfolio
+            </a>
+            <button
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 text-center mx-4 my-2"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                handleGetStarted();
+              }}
+            >
+              Get Started
+            </button>
+          </div>
+        )}
       </div>
     </header>
   );
