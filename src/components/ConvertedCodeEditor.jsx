@@ -2,9 +2,8 @@ import React from 'react';
 import Editor from '@monaco-editor/react';
 
 const ConvertedCodeEditor = ({ convertedCode, toLang, languages }) => (
-  <div className="flex flex-col backdrop-blur-xl rounded-2xl border border-gray-200/40 overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02]">
-    <div className="absolute inset-0 rounded-2xl pointer-events-none"></div>
-    <div className="px-6 py-4 border-b border-gray-200/40 backdrop-blur-sm relative z-10">
+  <div className="flex flex-col rounded-2xl border border-gray-200/40 overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02]">
+    <div className="px-6 py-4 border-b border-gray-200/40 relative z-10">
       <h3 className="text-sm font-semibold text-gray-700">
         Converted Code ({languages.find(l => l.id === toLang)?.name})
       </h3>
