@@ -3,7 +3,7 @@ import { Heart } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="backdrop-blur-xl border-t border-gray-200/30 mt-16 relative z-10 shadow-2xl bg-white/70">
+    <footer className="backdrop-blur-xl border-t border-gray-200/30 mt-16 relative z-10 shadow-2xl">
       <div className="max-w-6xl mx-auto px-6 py-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <span className="text-gray-500 text-sm md:text-base mb-2 md:mb-0">© 2025 CodeConvert. All rights reserved.</span>
