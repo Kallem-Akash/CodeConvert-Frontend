@@ -13,6 +13,7 @@ export const Header = () => {
   return (
     <header className="backdrop-blur-xl sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 relative z-10">
+      
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="p-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
