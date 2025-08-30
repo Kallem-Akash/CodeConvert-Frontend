@@ -15,11 +15,4 @@ export const languages = [
   { id: 'scala', name: 'Scala' },
   { id: 'r', name: 'R' },
   { id: 'matlab', name: 'MATLAB' },
-  { id: 'sql', name: 'SQL' },
-  { id: 'html', name: 'HTML' },
-  { id: 'css', name: 'CSS' },
-  { id: 'json', name: 'JSON' },
-  { id: 'xml', name: 'XML' },
-  { id: 'yaml', name: 'YAML' },
-  { id: 'markdown', name: 'Markdown' },
 ];
