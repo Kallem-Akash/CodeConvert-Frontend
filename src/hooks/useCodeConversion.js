@@ -12,7 +12,7 @@ const useCodeConversion = () => {
     if (!sourceCode.trim()) return;
     setIsConverting(true);
     try {
-      const response = await fetch('https://codeconvert-backend1.onrender.com', {
+      const response = await fetch('https://codeconvert-backend1.onrender.com/api/convert', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sourceCode, fromLang, toLang }),
